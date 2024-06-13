@@ -1,5 +1,8 @@
 #!/bin/bash
 
-echo "-----> Releasing OpenGL buildpack"
-exit 0
+cat <<EOF
+---
+default_process_types:
+  web: python app.py
+EOF
 
