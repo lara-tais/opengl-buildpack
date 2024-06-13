@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "-----> Releasing OpenGL buildpack"
+exit 0
+

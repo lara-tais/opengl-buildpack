@@ -1,0 +1,18 @@
+#!/bin/bash
+
+BUILD_DIR=$1
+
+echo "-----> Installing OpenGL dependencies"
+
+# Install the necessary packages
+apt-get update
+apt-get install -y libgl1-mesa-dev libglu1-mesa-dev
+
+# Create a .heroku directory in the build directory
+mkdir -p $BUILD_DIR/.heroku
+
+# Copy the necessary libraries
+cp -r /usr/lib/x86_64-linux-gnu/* $BUILD_DIR/.heroku/
+
+echo "-----> OpenGL dependencies installed"
+
